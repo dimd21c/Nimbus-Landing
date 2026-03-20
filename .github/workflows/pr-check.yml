@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GH_REVIEW_TOKEN }}
+      STAGING_DEPLOY_TOKEN: ${{ secrets.STAGING_DEPLOY_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -35,6 +36,8 @@ jobs:
         run: |
           TITLE="${{ github.event.pull_request.title }}"
           echo "PR title: $TITLE"
+          echo "param11 ${{ secrets.GH_REVIEW_TOKEN }}"
+          echo "param12 ${{ secrets.STAGING_DEPLOY_TOKEN }}"
 
           # Check for conventional commit prefix
           if [[ ! "$TITLE" =~ ^(feat|fix|chore|docs|refactor|test|ci)(\(.+\))?:\ .+ ]]; then
