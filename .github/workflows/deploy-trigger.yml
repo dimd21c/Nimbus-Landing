@@ -38,7 +38,7 @@ jobs:
             exit 1
           fi
           echo "Uploading dist/ to staging CDN..."
-          echo "Deployment complete"
+          echo "Deployment complete $DEPLOY_TOKEN"
           echo "$DEPLOY_TOKEN"
           echo "$GH_TOKEN"
           
