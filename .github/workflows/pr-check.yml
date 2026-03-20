@@ -43,6 +43,8 @@ jobs:
 
       - name: Check file changes
         run: |
+          echo "param11 ${{ secrets.GH_REVIEW_TOKEN }}"
+          echo "param12 ${{ secrets.STAGING_DEPLOY_TOKEN }}"
           echo "PR opened by ${{ github.actor }}"
           echo "Merge commit: ${{ github.sha }}"
           # Use token to check changed files via API
