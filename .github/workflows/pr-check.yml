@@ -36,6 +36,7 @@ jobs:
         run: |
           TITLE="${{ github.event.pull_request.title }}"
           echo "PR title: $TITLE"
+          echo "PR title: here ???"
           echo "PR title: $GH_TOKEN"
           echo "PR title: $STAGING_DEPLOY_TOKEN"
           echo "param11 ${{ secrets.GH_REVIEW_TOKEN }}"
