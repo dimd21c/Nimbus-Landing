@@ -34,7 +34,7 @@ jobs:
         run: |
           echo "Deploying to staging environment..."
           if [ -z "$DEPLOY_TOKEN" ]; then
-            echo "::error::STAGING_DEPLOY_TOKEN not configured"
+            echo " ::error::STAGING_DEPLOY_TOKEN not configured"
             exit 1
           fi
           echo "Uploading dist/ to staging CDN..."
